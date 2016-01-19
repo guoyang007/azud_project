@@ -1,0 +1,27 @@
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-19 20:04:08 +0800
+Connecting to database specified by database.yml
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (2.9ms)
+Compiled application.css  (0ms)  (pid 30510)
+Compiled jquery.js  (2ms)  (pid 30510)
+Compiled jquery_ujs.js  (0ms)  (pid 30510)
+Compiled application.js  (58ms)  (pid 30510)
+Completed 200 OK in 157ms (Views: 156.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-19 20:04:08 +0800
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-19 20:04:08 +0800
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-19 20:04:08 +0800
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-19 20:04:08 +0800
+Served asset /application.js - 200 OK (7ms)

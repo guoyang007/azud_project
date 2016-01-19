@@ -3,7 +3,6 @@ capybara-*.html
 .rspec
 
 /db/schema.rb
-/log
 /tmp
 /db/*.sqlite3
 /coverage/
