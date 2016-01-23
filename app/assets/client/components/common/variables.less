@@ -1,0 +1,76 @@
+// reset richtext
+.reset-richtext() {
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-align: justify;
+    & > * {
+        margin-bottom: 24px;
+    }
+    pre {
+        white-space: normal;
+    }
+    a {
+        text-decoration: none;
+        border-bottom: 1px solid #ffc81f;
+        padding-bottom: 4px;
+    }
+    blockquote {
+        margin: 0 16px !important;
+    }
+    img {
+        display: block;
+        margin: 0 auto 8px;
+        width: 100%;
+        height: auto;
+        max-width: 100% !important;
+    }
+    ul {
+        list-style: initial;
+        padding-left: 20px;
+    }
+    iframe,
+    embed {
+        width: 100%;
+        height: 500px;
+        max-width: 100% !important;
+        margin: 0 auto;
+    }
+    span,
+    p,
+    pre,
+    b,
+    i,
+    blockquote,
+    em,
+    ul,
+    li,
+    div {
+        font-family: Tahoma, Arial, "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "Heiti", "黑体", sans-serif !important;
+        font-size: 16px !important;
+        line-height: 32px !important;
+        color: #363636 !important;
+        letter-spacing: normal !important;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: Tahoma, Arial, "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "Heiti", "黑体", sans-serif !important;
+        display: block !important;
+        background-color: transparent !important;
+        border-left: 5px solid #ffc81f !important;
+        color: #363636 !important;
+        padding-left: 15px !important;
+        font-size: 24px !important;
+        line-height: 32px !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        margin-top: 28px !important;
+        margin-bottom: 14px !important;
+    }
+}

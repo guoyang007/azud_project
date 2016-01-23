@@ -1,0 +1,373 @@
+body,
+button,
+input,
+select,
+textarea {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: Arial, "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", Helvetica, Tahoma, Arial sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+}
+
+body {
+    color: #262626;
+    background-color: #f5f5f5;
+    .page-content {
+        width: 1110px;
+        margin: 0 auto;
+    }
+}
+
+a {
+    vertical-align: top;
+    text-decoration: none;
+}
+
+// 移除img的底边距
+img {
+    vertical-align: top;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: #044588;
+    font-size: 22px;
+}
+
+// remove outline
+textarea,
+a,
+select,
+option,
+input {
+    &:active,
+    &:focus {
+        outline: 0;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+::-webkit-input-placeholder {
+    color: #cccccc;
+}
+
+::-moz-placeholder {
+    color: #cccccc;
+}
+
+:-ms-input-plcaeholder {
+    color: #cccccc;
+}
+
+input:-moz-placeholder {
+    color: #cccccc;
+}
+
+// clearfix 
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+// border-box
+*,
+*:before,
+*:after {
+    // Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- 
+    -webkit-box-sizing: border-box;
+    // Firefox (desktop or Android) 28-
+    -moz-box-sizing: border-box;
+    // Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+
+    box-sizing: border-box;
+}
+
+.dib-wrapper {
+    font-size: 0;
+    .dib {
+        display: inline-block;
+    }
+}
+
+
+.com-notification {
+    position: fixed;
+    z-index: 10900;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 10px 24px;
+}
+
+
+.showmore-wrapper {
+    display: none;
+    text-align: center;
+    margin-top: 40px;
+    .showmore {
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 18px;
+        padding: 15px 50px;
+    }
+}
+
+.nomore-wrapper {
+    display: none;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #bbbbbb;
+    .nomore {
+        display: inline-block;
+        position: relative;
+        padding: 0 18px;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 1px;
+            background-color: #dddddd;
+        }
+        &:before {
+            right: -40px;
+            top: 10px;
+        }
+        &:after {
+            left: -40px;
+            top: 10px;
+        }
+    }
+}
+
+.avatar {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+    }
+    &.circle {
+        img {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+    &.x25 {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+}
+
+// 按钮
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 8px 18px;
+    background-color: #044588;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+// center & vertical
+.vertical-wrapper {
+    width: 100%;
+    height: 100%;
+    display: table;
+    .vertical {
+        display: table-cell;
+        vertical-align: middle;
+        & > * {
+            vertical-align: middle;
+        }
+        span {
+            display: inline-block;
+        }
+        img {
+            display: inline-block;
+        }
+    }
+    &.center {
+        .vertical {
+            text-align: center;
+        }
+    }
+}
+
+.imgcover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: -100%;
+        right: -100%;
+        top: -100%;
+        bottom: -100%;
+        margin: auto;
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
+
+
+// 分类图标
+.category {
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    img {
+        float: left;
+        height: 100%;
+    }
+    span {
+        display: inline-block;
+        line-height: 30px;
+        margin-left: 5px;
+    }
+    &.x20 {
+        height: 20px;
+        line-height: 20px;
+        span {
+            line-height: 20px;
+        }
+    }
+}
+
+//reset magnific-popup
+.mfp-close-btn-in .mfp-close {
+    cursor: pointer;
+    font-size: 26px;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+// animated.css
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+//magnific-popup animation
+// at start
+.mfp-slide-bottom .zoom-anim-dialog {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
+    -moz-transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
+    -ms-transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
+    -o-transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
+    transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
+}
+
+// animate in 
+.mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+    opacity: 1;
+    -webkit-transform: translateY(0) perspective( 600px) rotateX( 0);
+    -moz-transform: translateY(0) perspective( 600px) rotateX( 0);
+    -ms-transform: translateY(0) perspective( 600px) rotateX( 0);
+    -o-transform: translateY(0) perspective( 600px) rotateX( 0);
+    transform: translateY(0) perspective( 600px) rotateX( 0);
+}
+
+// animate out 
+.mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+    opacity: 0;
+    -webkit-transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
+    -moz-transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
+    -ms-transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
+    -o-transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
+    transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
+}
+
+// Dark overlay, start state 
+.mfp-slide-bottom.mfp-bg {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+// animate in 
+.mfp-slide-bottom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+// animate out 
+.mfp-slide-bottom.mfp-removing.mfp-bg {
+    opacity: 0;
+}

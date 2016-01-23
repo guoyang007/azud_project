@@ -58,5 +58,6 @@ module Azud
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    config.paths['app/views'].unshift("#{Rails.root}/app/assets/client")
   end
 end
