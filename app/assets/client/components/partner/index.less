@@ -1,0 +1,44 @@
+/**
+ *=require swiper/swiper
+ *
+ * =require_self
+ * 
+ */
+.com-partner{
+	width:1110px;
+	margin:0 auto;
+	padding:20px 0 40px;
+	.partner-hd{
+		text-align: center;
+		h2{
+			position: relative;
+			display: inline-block;
+			&:before{
+				position:absolute;
+				left: 50%;
+				margin-left: -75px;
+				width:150px;
+				font-size: 14px;
+				color: #999999;
+				bottom: -24px;
+				content:"Bussiness Partners";
+			}
+			.icon{
+				font-size: 20px;
+			}
+		}
+	}
+	.swiper-container{
+		margin-top: 40px;
+		height: 44px;
+		width:100%;
+		padding-left: 50px;
+		.swiper-wrapper{
+			height:100%;
+			.swiper-slide{
+				height:100%;
+				width:100px;
+			}
+		}
+	}
+}

@@ -1,13 +1,73 @@
-<%render partial: "components/full-banner"%>
 <div class="page-container">
-	<div class="page-content">
-		
+<%= stylesheet_link_tag "pages/homes/show", :media => "all" %>
+<%= render partial: "components/full-banner/index"%>
+	<div class="page-content product">
+		<div class="content-hd">
+			<h2><span class="iconfont icon-water icon"></span>产品与服务</h2>
+		</div>
+		<ul class="content-bd clearfix">
+			<li>
+				<figure>
+					<img src="/img/home/pro-1.png">
+					<p>工业过滤</p>
+				</figure>
+				<p><a href="javascript:void(0);">查看更多</a></p>
+			</li>
+			<li>
+				<figure>
+					<img src="/img/home/pro-2.png">
+					<p>集成方案</p>
+				</figure>
+				<p><a href="javascript:void(0);">查看更多</a></p>
+			</li>
+			<li>
+				<figure>
+					<img src="/img/home/pro-3.png">
+					<p>农业灌溉</p>
+				</figure>
+				<p><a href="javascript:void(0);">查看更多</a></p>
+			</li>
+		</ul>
 	</div>
-	<div class="full-pic">
-		
+	<div class="full-pic imgcover">
+		<img src="/img/home/banner.jpg">
+		<div class="detail">
+			<h2>The Culture of Water</h2>
+			<p>
+				AZUD is a world leader in the<br>
+				MANUFACTURING of <br>
+				EIFTRATION & WATER TREATMENT<br>
+				TECHNOLOGIES<br>
+				to provide solutions for DIFFERENT KINDS<br>
+				OF WATER AND/OR REQUIREMENTS.<br>
+			</p>
+			<a href="javascript:void(0);">了解AZUD</a>
+		</div>
 	</div>
-	<div class="page-content news">
-		
+	<div class="news">
+		<div class="page-content">
+			<div class="content-hd">
+				<h2><span class="iconfont icon-water icon"></span>新闻资讯</h2>
+			</div>
+			<div class="content-bd clearfix">
+				<a href="javascript:void(0);">
+					<p class="smart-date">05/12/2015</p>
+					<h2>新闻标题新闻标题</h2>
+					<p class="excerpt"> 这里是文章内容的简介，并且只取两行放在这里，撑不下的用...代替</p>
+				</a>
+				<a href="javascript:void(0);">
+					<p class="smart-date">05/12/2015</p>
+					<h2>新闻标题新闻标题</h2>
+					<p class="excerpt"> 这里是文章内容的简介，并且只取两行放在这里，撑不下的用...代替这里是文章内容的简介，并且只取两行放在这里，撑不下的用...代替</p>
+				</a>
+				<a href="javascript:void(0);">
+					<p class="smart-date">05/12/2015</p>
+					<h2>新闻标题新闻标题</h2>
+					<p class="excerpt"> 这里是文章内容的简介，并且只取两行放在这里，撑不下的用...代替</p>
+				</a>	
+			</div>
+		</div>
 	</div>
-<%render partial: "components/partner"%>
+<%=render partial: "components/partner/index"%>
+<%= javascript_include_tag "pages/homes/show" %>
 </div>
