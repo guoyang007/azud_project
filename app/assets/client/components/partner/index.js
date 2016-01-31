@@ -40,6 +40,7 @@
 	    prevButton:'.swiper-button-prev',
 	    nextButton:'.swiper-button-next',
 	    slidesPerGroup : 6,
+        // slidesOffsetBefore:50,
 	  })        
         }
     }

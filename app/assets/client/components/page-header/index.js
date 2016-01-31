@@ -32,14 +32,16 @@
         bindEvents: function() {
             var me = this,
                 el = me.el,
-                collapse=false;
+                collapse=false,
+                elTop=el.find('.page-hd').outerHeight();
+            console.log(elTop);
 
                 $(window).on("scroll",function(e){
                 	var scrollTop=$(window).scrollTop();
-                	if (!collapse&&scrollTop>90) {
+                	if (!collapse&&scrollTop>=elTop) {
                 		el.addClass("collapse");
                 		collapse=true;
-                	}else if(collapse&&scrollTop<90){
+                	}else if(collapse&&scrollTop<elTop){
                 		el.removeClass("collapse");
                 		collapse=false;
                 	}
