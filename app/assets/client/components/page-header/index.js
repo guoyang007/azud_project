@@ -32,10 +32,10 @@
         bindEvents: function() {
             var me = this,
                 el = me.el,
+                elIndex=null,
                 collapse=false,
                 elTop=el.find('.page-hd').outerHeight();
-            console.log(elTop);
-
+ 
                 $(window).on("scroll",function(e){
                 	var scrollTop=$(window).scrollTop();
                 	if (!collapse&&scrollTop>=elTop) {
@@ -46,11 +46,16 @@
                 		collapse=false;
                 	}
                 })
-
-                $(".page-bd").on("click",function(e){
-                    e.preventDefault();
+                el.find(".navs .nav").on('click',function(e){ 
                     var elcurrent=e.currentTarget;
                     $(elcurrent).addClass("cur").siblings().removeClass("cur");
+                    elIndex=$('.navs .nav').index(elcurrent);
+                    $(".lists .list").eq(0).slideDown().siblings().slideUp();
+                        
+                })
+                $(".lists .list").on('click',function(e){
+                    var elcurrent=e.currentTarget;
+                    $(elcurrent).addClass('active').siblings().removeClass('active');
                 })
 
 

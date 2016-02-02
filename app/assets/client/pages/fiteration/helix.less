@@ -1,0 +1,93 @@
+/**
+ * =require normalize.css/normalize
+ * =require components/common/index
+ * =require components/helix-module/index
+ * =require components/helix-apply/index
+ * =require_self
+ */
+body{
+	max-width: 1400px;
+	margin:0 auto;
+	background-color:#ffffff;
+	.page-container{	
+		width:1110px;
+		margin:0 auto;
+		padding-bottom: 150px;
+		.banner{
+			width: 100%;
+			height: 312px;
+			position: relative;
+			img{
+				height:100%;
+			}
+			a{
+				position:absolute;
+				left: 505px;
+				top: 200px;
+				color: #eeeeee;
+				font-size: 16px;
+			}
+		}
+		.product{
+			h2{
+				margin:36px 0 30px;
+			}
+			.pros{
+				width:100%;
+				.pro{
+					width:50%;
+					height:280px;
+					float:left;
+					margin-bottom: 40px;
+					&:nth-child(n+3){
+						margin-bottom: 0;
+					}
+					.pic{
+						float:left;
+						width:290px;
+						height:270px;
+						img{
+							margin:auto;
+							display:table;
+						}
+					}
+					.pic-4{
+						padding-top: 40px;
+					}
+					.introduce{
+						width:250px;
+						display:inline-block;
+						h6{
+							font-size: 18px;
+							color:#014383;
+							line-height: 30px;
+							margin-bottom: 8px;
+						}
+						.excerpt{
+							font-size: 14px;
+							line-height: 18px;
+							color:#313131;
+						}
+						.tech{
+							margin:14px 0;
+							font-size: 14px;
+							line-height: 24px;
+							color:#313131;
+						}
+						.load{
+							padding: 0 9px;
+							font-size: 13px;
+							line-height: 24px;
+							color:#014383;
+							height:24px;
+							display:inline-block;
+							border:1px solid #014383;
+							border-radius: 20px;
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
