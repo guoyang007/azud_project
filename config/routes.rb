@@ -8,6 +8,7 @@ Azud::Application.routes.draw do
       get "/helix" => "fiteration#helix"
       get "/luxon" => "fiteration#luxon"
       get "/semiauto" => "fiteration#semiauto"
+      get "/helix/detail" => "fiteration#detail"
     end
   end
 

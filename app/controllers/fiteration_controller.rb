@@ -7,4 +7,7 @@ class FiterationController < BaseController
 
 	def semiauto
 	end
+	
+	def detail
+	end
 end
