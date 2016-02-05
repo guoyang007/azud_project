@@ -34,14 +34,15 @@
                 el = me.el,
                 elIndex=null,
                 collapse=false,
-                elTop=el.find('.page-hd').outerHeight();
+                elTop=$('.com-page-header').outerHeight(),
+                elHeight=el.find('.page-hd').outerHeight();
  
                 $(window).on("scroll",function(e){
                 	var scrollTop=$(window).scrollTop();
                 	if (!collapse&&scrollTop>=elTop) {
                 		el.addClass("collapse");
                 		collapse=true;
-                	}else if(collapse&&scrollTop<elTop){
+                	}else if(collapse&&scrollTop<elHeight){
                 		el.removeClass("collapse");
                 		collapse=false;
                 	}

@@ -28,7 +28,25 @@
         },
         bindEvents: function() {
             var me = this,
-                el = me.el;
+                el = me.el,
+                index,
+                elIndex=null;
+
+            el.find('.lists li').on('click',function(e){
+                index=$(this).index();
+                
+                if(elIndex==null){
+                    $('.module-detail').eq(index).slideDown();
+                    elIndex=index;
+                }
+                else{
+                    if(index==elIndex){return;}
+                    $('.module-detail').eq(elIndex).slideUp();
+                    $('.module-detail').eq(index).slideDown();
+                    
+                    elIndex=index;
+                }
+            })
             
          
 

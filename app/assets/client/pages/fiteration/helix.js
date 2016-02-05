@@ -9,5 +9,6 @@ $(function(){
 	var el=$('body');
 
 	el.find('.com-page-header').PageHeader();
+	el.find('.com-helix-module').HelixModule();
 	el.find('.com-apply').HelixApply();
 })
