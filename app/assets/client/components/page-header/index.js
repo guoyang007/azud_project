@@ -35,7 +35,17 @@
                 elIndex=null,
                 collapse=false,
                 elTop=$('.com-page-header').outerHeight(),
-                elHeight=el.find('.page-hd').outerHeight();
+                elHeight=el.find('.page-hd').outerHeight(),
+                curPath=window.location.pathname;
+
+                $('.list li a').each(function(e){
+                    if($(this).attr('href')==curPath){
+                        $(this).parent().addClass('active').parent().addClass('show');
+                    }
+                })
+                if(curPath=='/fiteration/helix/detail'){
+                    $('.page-bd .list').addClass('show').children('li:first').addClass('active');
+                }
  
                 $(window).on("scroll",function(e){
                 	var scrollTop=$(window).scrollTop();
@@ -54,11 +64,6 @@
                     $(".lists .list").eq(0).slideDown().siblings().slideUp();
                         
                 })
-                $(".lists .list").on('click',function(e){
-                    var elcurrent=e.currentTarget;
-                    $(elcurrent).addClass('active').siblings().removeClass('active');
-                })
-
 
         }
     }

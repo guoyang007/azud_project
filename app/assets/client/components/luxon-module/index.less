@@ -11,8 +11,11 @@
 			cursor: pointer;
 			float: left;
 			width: 130px;
+			height:175px;
 			text-align: center;
 			margin-right: 58px;
+			display:table;
+			position:relative;
 			&:last-child{
 				margin-right: 0;
 			}
@@ -22,9 +25,18 @@
 			&:nth-child(5){
 				width:140px;
 			}
+			.pic{
+				height:120px;
+				display:table-cell;
+				vertical-align:middle;
+				text-align: center;
+				padding-bottom: 55px;
+			}
 			.name{
-				margin-top: 10px;
-				display: inline-block;
+				position:absolute;
+				left:0;
+				width:100%;
+				bottom:0;
 				padding: 8px 12px;
 				font-size: 17px;
 				line-height: 17px;
