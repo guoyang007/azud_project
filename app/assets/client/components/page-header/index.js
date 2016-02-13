@@ -40,11 +40,24 @@
 
                 $('.list li a').each(function(e){
                     if($(this).attr('href')==curPath){
-                        $(this).parent().addClass('active').parent().addClass('show');
+                        $('.lists').slideDown();
+                        $(this).parent().addClass('active');
                     }
                 })
+                $('.navs .nav').each(function(e){
+                    if($('this').attr('href')==curPath){
+                        $(this).addClass('cur');
+                    }
+                })
+                el.find("[href='/fiteration']").on("click",function(event) {
+                    /* Act on the event */
+                    event.preventDefault();
+                })
                 if(curPath=='/fiteration/helix/detail'){
-                    $('.page-bd .list').addClass('show').children('li:first').addClass('active');
+                    $('.page-bd .lists').slideDown().find('li:first').addClass('active');
+                }
+                if(curPath=='/'){
+                    $('.nav:first').addClass('cur');
                 }
  
                 $(window).on("scroll",function(e){
@@ -61,6 +74,7 @@
                     var elcurrent=e.currentTarget;
                     $(elcurrent).addClass("cur").siblings().removeClass("cur");
                     elIndex=$('.navs .nav').index(elcurrent);
+                    $(".page-bd .lists").slideDown();
                     $(".lists .list").eq(0).slideDown().siblings().slideUp();
                         
                 })
