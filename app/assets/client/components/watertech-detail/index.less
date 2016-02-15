@@ -1,0 +1,71 @@
+/**	
+ *
+ * =require_self
+ */
+.com-watertech-detail{
+	width: 100%;
+	.detail-title{
+		margin-bottom: 30px;
+	}
+	.system{
+		.system-hd{
+			width:100%;
+			text-align: center;
+			margin-bottom: 20px;
+			.system-title{
+				font-size: 20px;
+				line-height: 20px;
+				color: #333333;
+				position: relative;
+				&:after{
+					position:absolute;
+					z-index: -2;
+					top: 9px;
+					left: 0;
+					content: "";
+					width:100%;
+					height:1px;
+					display: inline-block;
+					transform:scaleY(0.5);
+					background-color: #d1d1d1;
+				}
+				span{
+					padding:0 15px;
+					background-color: #fff;
+				}
+			}
+			.system-depict{
+				margin-top: 10px;
+				font-size: 14px;
+			}
+		}
+		.system-bd{
+			width:100%;
+			.pro{
+				float: left;
+				width:50%;
+				margin-bottom: 30px;
+				text-align: center;
+				.pic{
+					height:214px;
+					width:100%;
+					display:table;
+					.wrapper{
+						display:table-cell;
+						vertical-align: middle;
+					}
+				}
+				.intro{
+					font-size: 14px;
+					line-height: 24px;
+					h6{
+						font-size: 18px;
+						line-height: 18px;
+						color:#014383;
+						margin:10px 0;
+					}
+				}
+			}
+		}
+	}
+}

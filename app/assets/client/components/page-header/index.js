@@ -45,7 +45,7 @@
                     }
                 })
                 $('.navs .nav').each(function(e){
-                    if($('this').attr('href')==curPath){
+                    if($(this).attr('href')==curPath){
                         $(this).addClass('cur');
                     }
                 })

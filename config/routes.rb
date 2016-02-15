@@ -1,8 +1,9 @@
 Azud::Application.routes.draw do
   root :to => 'homes#index'
-  get 'aboutus(.html)' => 'aboutus#aboutus'
+
   get 'contactus(.html)' => 'contactus#contactus'
- 
+  get 'watertech(.html)' => 'watertech#watertech'
+
   resources :fiteration do#关于
     collection do
       get "/helix" => "fiteration#helix"
