@@ -34,6 +34,7 @@
                 el = me.el,
                 elIndex=null,
                 collapse=false,
+                press=new RegExp("press")
                 elTop=$('.com-page-header').outerHeight(),
                 elHeight=el.find('.page-hd').outerHeight(),
                 curPath=window.location.pathname;
@@ -53,6 +54,9 @@
                     /* Act on the event */
                     event.preventDefault();
                 })
+                if(press.test(curPath)){
+                    $("[href='/press']").addClass('cur');
+                }
                 if(curPath=='/fiteration/helix/detail'){
                     $('.page-bd .lists').slideDown().find('li:first').addClass('active');
                 }

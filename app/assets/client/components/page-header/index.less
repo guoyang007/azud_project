@@ -5,10 +5,9 @@
  */
 
 .com-page-header{
-	position:relative;
-	top:0;
-	z-index: 200;
+	min-height:150px;
 	width:100%;
+	position:relative;
 	background-color: #ffffff;
 	.page-hd{
 		width:1110px;
@@ -67,6 +66,7 @@
 	}
 	.page-bd{
 		width:100%;
+		background-color: #fff;
 		position: relative;
 		&:before{
 			content: "";
@@ -76,7 +76,7 @@
 			height:32px;
 			width:100%;
 			display:inline-block;
-			background-image: url(/img/line.png);
+			background: url(/img/line.png) no-repeat;
 		}
 		.navs{
 			width:1110px;
@@ -164,16 +164,13 @@
 	}
 }
 &.collapse{
-	position:fixed;
-	top:-60px;
-	transition:transform 1s ease;
-	transition:-webkit-transform 1s ease;
-	transform:translateY(60px);
-	-webkit-transform:translateY(60px);
-	.page-hd{
-		display:none;
-	}
 	.page-bd{
-
+		z-index: 200;
+		position:fixed;
+		top:-60px;
+		transition:transform 1s ease;
+		transition:-webkit-transform 1s ease;
+		transform:translateY(60px);
+		-webkit-transform:translateY(60px);
 	}
 }
