@@ -87,6 +87,11 @@ input:-moz-placeholder {
     color: #898989;
 }
 
+input:-webkit-autofill {
+-webkit-box-shadow: 0 0 0px 40px #eeeeee inset;
+}
+
+
 // clearfix 
 .clearfix:before,
 .clearfix:after {
@@ -110,90 +115,6 @@ input:-moz-placeholder {
     box-sizing: border-box;
 }
 
-.dib-wrapper {
-    font-size: 0;
-    .dib {
-        display: inline-block;
-    }
-}
-
-
-.com-notification {
-    position: fixed;
-    z-index: 10900;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 4px;
-    font-size: 14px;
-    color: #ffffff;
-    padding: 10px 24px;
-}
-
-
-.showmore-wrapper {
-    display: none;
-    text-align: center;
-    margin-top: 40px;
-    .showmore {
-        color: #ffffff;
-        font-size: 18px;
-        line-height: 18px;
-        padding: 15px 50px;
-    }
-}
-
-.nomore-wrapper {
-    display: none;
-    padding-top: 50px;
-    text-align: center;
-    font-size: 18px;
-    color: #bbbbbb;
-    .nomore {
-        display: inline-block;
-        position: relative;
-        padding: 0 18px;
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 1px;
-            background-color: #dddddd;
-        }
-        &:before {
-            right: -40px;
-            top: 10px;
-        }
-        &:after {
-            left: -40px;
-            top: 10px;
-        }
-    }
-}
-
-.avatar {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    line-height: 60px;
-    img {
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-        max-height: 100%;
-    }
-    &.circle {
-        img {
-            border-radius: 50%;
-            overflow: hidden;
-        }
-    }
-    &.x25 {
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-    }
-}
 
 // 按钮
 .btn {
@@ -283,102 +204,7 @@ input:-moz-placeholder {
     }
 }
 
-//reset magnific-popup
-.mfp-close-btn-in .mfp-close {
-    cursor: pointer;
-    font-size: 26px;
-    padding: 0;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    margin-top: 20px;
-    margin-right: 20px;
-}
 
-// animated.css
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-}
-
-//magnific-popup animation
-// at start
-.mfp-slide-bottom .zoom-anim-dialog {
-    opacity: 0;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    -webkit-transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
-    -moz-transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
-    -ms-transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
-    -o-transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
-    transform: translateY(-20px) perspective( 600px) rotateX( 10deg);
-}
-
-// animate in 
-.mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
-    opacity: 1;
-    -webkit-transform: translateY(0) perspective( 600px) rotateX( 0);
-    -moz-transform: translateY(0) perspective( 600px) rotateX( 0);
-    -ms-transform: translateY(0) perspective( 600px) rotateX( 0);
-    -o-transform: translateY(0) perspective( 600px) rotateX( 0);
-    transform: translateY(0) perspective( 600px) rotateX( 0);
-}
-
-// animate out 
-.mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
-    opacity: 0;
-    -webkit-transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
-    -moz-transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
-    -ms-transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
-    -o-transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
-    transform: translateY(-10px) perspective( 600px) rotateX( 10deg);
-}
-
-// Dark overlay, start state 
-.mfp-slide-bottom.mfp-bg {
-    opacity: 0;
-    -webkit-transition: opacity 0.3s ease-out;
-    -moz-transition: opacity 0.3s ease-out;
-    -o-transition: opacity 0.3s ease-out;
-    transition: opacity 0.3s ease-out;
-}
-
-// animate in 
-.mfp-slide-bottom.mfp-ready.mfp-bg {
-    opacity: 0.8;
-}
-
-// animate out 
-.mfp-slide-bottom.mfp-removing.mfp-bg {
-    opacity: 0;
-}
 .mb0{
     margin-bottom: 0 !important;
 }

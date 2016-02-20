@@ -34,17 +34,19 @@
                 el = me.el,
                 elIndex=null,
                 collapse=false,
-                press=new RegExp("press")
+                press=new RegExp("press"),
+                fiteration=new RegExp("fiteration"),
                 elTop=$('.com-page-header').outerHeight(),
                 elHeight=el.find('.page-hd').outerHeight(),
                 curPath=window.location.pathname;
 
                 $('.list li a').each(function(e){
                     if($(this).attr('href')==curPath){
-                        $('.lists').slideDown();
+                        $('.lists').show();
                         $(this).parent().addClass('active');
                     }
                 })
+                //当前目录下高亮
                 $('.navs .nav').each(function(e){
                     if($(this).attr('href')==curPath){
                         $(this).addClass('cur');
@@ -57,13 +59,16 @@
                 if(press.test(curPath)){
                     $("[href='/press']").addClass('cur');
                 }
+                if(fiteration.test(curPath)){
+                    el.css("height","197px");
+                }
                 if(curPath=='/fiteration/helix/detail'){
                     $('.page-bd .lists').slideDown().find('li:first').addClass('active');
                 }
                 if(curPath=='/'){
                     $('.nav:first').addClass('cur');
                 }
- 
+                //向下滚动一定距离后固定菜单
                 $(window).on("scroll",function(e){
                 	var scrollTop=$(window).scrollTop();
                 	if (!collapse&&scrollTop>=elTop) {
@@ -74,13 +79,17 @@
                 		collapse=false;
                 	}
                 })
+                //展开二级菜单
                 el.find(".navs .nav").on('click',function(e){ 
                     var elcurrent=e.currentTarget;
                     $(elcurrent).addClass("cur").siblings().removeClass("cur");
-                    elIndex=$('.navs .nav').index(elcurrent);
-                    $(".page-bd .lists").slideDown();
+                    // elIndex=$('.navs .nav').index(elcurrent);
+                    // $(".page-bd .lists").slideDown();
                     $(".lists .list").eq(0).slideDown().siblings().slideUp();
                         
+                });
+                el.find('.navs .nav:eq(2)').on('click',function(e){
+                    $(".page-bd .lists").slideDown();
                 })
 
         }
