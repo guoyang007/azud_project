@@ -1,5 +1,6 @@
 //= require jquery/jquery
 //= require components/common/util
+//= require components/common/initRipple 
 //
 //= require_self
 
