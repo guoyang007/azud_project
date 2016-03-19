@@ -6,9 +6,15 @@
 // =require_self
  //
 $(function(){
-	var el=$('body');
+	var el=$('body'),
+		curPath=window.location.pathname,
+		fiteration=new RegExp("fiteration");
 
 	el.find('.com-page-header').PageHeader();
 	el.find('.com-helix-module').HelixModule();
 	el.find('.com-helix-apply').HelixApply();
+
+	if(fiteration.test(curPath)){
+	    $('.page-container').css("padding-top","197px");
+	}
 })

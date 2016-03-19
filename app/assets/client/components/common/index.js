@@ -19,6 +19,8 @@
 
             return true;
         });
+
+        
     }
 
     $.fn.initLink = initLink;

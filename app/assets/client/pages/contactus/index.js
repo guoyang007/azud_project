@@ -7,10 +7,12 @@
  //
 
 $(function() {
-    var el = $('body');
+    var el = $('body'),
+    elClientHeight=document.documentElement.clientHeight;
 
 
     // 初始化组件
     el.find('.com-page-header').PageHeader();
     el.find('.com-contactus-demand').ContactusDemand();
+    $('page-container').css('min-height',elClientHeight);
 });

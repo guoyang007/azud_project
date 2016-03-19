@@ -5,7 +5,8 @@
  //
 
 $(function() {
-    var el = $('body');
+    var el = $('body'),
+        elClientHeight=document.documentElement.clientHeight;
 
 
     // 初始化组件
@@ -16,5 +17,6 @@ $(function() {
     		$(this).text($(this).text().substring(0,maxwidth));
     		$(this).html($(this).text()+"...");
     	}
-    })
+    });
+    $('.page-container').css('min-height',elClientHeight);
 });

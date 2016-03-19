@@ -59,8 +59,11 @@
                 if(press.test(curPath)){
                     $("[href='/press']").addClass('cur');
                 }
+                // if(fiteration.test(curPath)){
+                //     el.css("height","197px");
+                // }
                 if(fiteration.test(curPath)){
-                    el.css("height","197px");
+                    el.css("margin-bottom","-197px");
                 }
                 if(curPath=='/fiteration/helix/detail'){
                     $('.page-bd .lists').slideDown().find('li:first').addClass('active');
