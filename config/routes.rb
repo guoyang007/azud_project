@@ -14,11 +14,6 @@ Azud::Application.routes.draw do
     end
   end
 
-  resources :press do#关于
-    collection do
-      get "/" => "press#index"
-      get "/detail" => "press#detail"
-    end
-  end
+  resources :papers#关于
 
 end

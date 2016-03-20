@@ -4,21 +4,13 @@
 			<span class="iconfont icon-water icon"></span><h2>新闻资讯</h2>
 		</div>
 		<div class="content-bd clearfix">
-			<a href="javascript:void(0);">
-				<p class="smart-date" data-originDate="Mar 06 2016"></p>
-				<h2>新闻标题新闻标题</h2>
-				<p class="excerpt"> 这里是文章内容的简介，并且只取两行放在这里，撑不下的用...代替</p>
-			</a>
-			<a href="javascript:void(0);">
-				<p class="smart-date" data-originDate="Mar 06 2016"></p>
-				<h2>新闻标题新闻标题</h2>
-				<p class="excerpt"> 这里是文章内容的简介，并且只取两行放在这里，撑不下的用...代替这里是文章内容的简介，并且只取两行放在这里，撑不下的用...代替</p>
-			</a>
-			<a href="javascript:void(0);">
-				<p class="smart-date" data-originDate="Mar 06 2016"></p>
-				<h2>新闻标题新闻标题</h2>
-				<p class="excerpt"> 这里是文章内容的简介，并且只取两行放在这里，撑不下的用...代替</p>
-			</a>	
+			<% @papers.each do |paper|%>
+				<a href="/papers/<%= paper.id %>">
+					<p class="smart-date" data-originDate=<%= paper.updated_at %>></p>
+					<h2><%= paper.title %></h2>
+					<p class="excerpt"> <%= paper.subtitle %></p>
+				</a>
+			<% end %>
 		</div>
 	</div>
 </div>

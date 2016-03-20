@@ -1,0 +1,22 @@
+<div class="page-container">
+	<%= stylesheet_link_tag "pages/press/index" %>
+	<div class="banner"><img src="/img/press/banner.jpg" alt=""></div>
+	<ul class="lists">
+	<% @papers.each do |paper|%>
+		<li class="list">
+			<a href="/papers/<%=paper.id %>" target="_self">
+				<h4><%= paper.title %></h4>
+				<p class="text-overflow"><%= paper.subtitle %></p>
+				<span><%= paper.updated_at.strftime("%Y-%m-%d") %></span>
+			</a>
+		</li>
+	<%end%>
+	</ul>
+	<div class="digg_pagination">
+	        <div class="page_info">
+	          <%= page_entries_info @posts %>
+	        </div>
+	        <%= will_paginate @posts, :container => false %>
+	</div>
+	<%= javascript_include_tag "pages/press/index" %>
+</div>

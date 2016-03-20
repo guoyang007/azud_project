@@ -1,0 +1,20 @@
+<div class="page-container">
+	<%=stylesheet_link_tag 'pages/press/detail' %>
+	<div class="container">
+		<div class="title">
+			<h1><%= @paper.title %></h1>
+			<span class="smart-time">2016-2-13  07:21</span>
+		</div>
+		<div class="rich-text">
+			<%#= @paper.content.html_safe %>
+			<h6><%= @paper.subtitle %> </h6>
+			<p><%= @paper.content %></p>
+		</div>
+	</div>
+	<div class="sub-nav clearfix">
+		<a href="/papers/<%= @paper.id - 1 %>">上一篇</a>
+		<a href="/papers/<%= @paper.id + 1 %>">下一篇</a>
+		<a href="/papers">返回列表</a>
+	</div>
+	<%= javascript_include_tag "pages/press/detail" %>
+</div>
