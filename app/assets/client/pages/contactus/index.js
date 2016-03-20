@@ -1,4 +1,3 @@
-//
 // =require components/common/index
 // =require components/page-header/index
 // =require components/contactus-demand/index
@@ -14,5 +13,6 @@ $(function() {
     // 初始化组件
     el.find('.com-page-header').PageHeader();
     el.find('.com-contactus-demand').ContactusDemand();
+    $.fn.initRipple();
     $('page-container').css('min-height',elClientHeight);
 });

@@ -1,4 +1,5 @@
 //=require_self
+//= require components/common/initRipple 
 //
 //
 
@@ -19,6 +20,7 @@
                 el = me.el;
 
             me.bindEvents();
+            $.fn.initRipple();
            
 
             window.COMS = window.COMS || [];
@@ -33,8 +35,6 @@
                 el = me.el;
 
             el.on("click",".content .submit",function(e){
-                $.fn.initRipple();
-                return;
                 e.preventDefault();
                 var name=$('input[type="text"]').val().length,
                     email=$('input[type="email"]').val().length,
