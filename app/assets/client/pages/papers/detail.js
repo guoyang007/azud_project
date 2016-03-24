@@ -7,7 +7,6 @@
 $(function() {
     var el = $('body');
 
-
     // 初始化组件
     el.find('.com-page-header').PageHeader();
 });

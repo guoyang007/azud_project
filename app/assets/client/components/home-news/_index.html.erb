@@ -6,7 +6,7 @@
 		<div class="content-bd clearfix">
 			<% @papers.each do |paper|%>
 				<a href="/papers/<%= paper.id %>">
-					<p class="smart-date" data-originDate=<%= paper.updated_at %>></p>
+					<p class="smart-date" data-originDate="<%= paper.updated_at %>"></p>
 					<h2><%= paper.title %></h2>
 					<p class="excerpt"> <%= paper.subtitle %></p>
 				</a>
