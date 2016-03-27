@@ -126,3 +126,5 @@ DEPENDENCIES
   uglifier (= 2.5.3)
   will_paginate (= 3.0.7)
   will_paginate-bootstrap (= 1.0.1)
+BUNDLED WITH
+	1.11.2
