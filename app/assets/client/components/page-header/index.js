@@ -21,7 +21,7 @@
                 el = me.el;
 
             me.bindEvents();
-
+            $.fn.initLink();
             window.COMS = window.COMS || [];
             el.attr('data-initialized', 'true');
             el.attr('data-guid', window.COMS.length);
