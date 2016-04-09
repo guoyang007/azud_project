@@ -59,7 +59,7 @@ body{
 								bottom:-20px;
 								left:50%;
 								margin-left: -75px;
-								content:"Industrial Filtration";
+								content:"Filtration System";
 								font-size: 12px;
 								color:#626262;
 							}
@@ -103,20 +103,14 @@ body{
 
 		}
 		.full-pic{
-			width:1110px;
+			width:100%;
 			height: 463px;
 			position:relative;
-			&:after{
-				content:"";
-				position:absolute;
-				left:0;
-				top:0;
-				width:100%;
-				height:100%;
-				background-color: rgba(0, 0, 0, 0.1);
-			}
 			img{
-				width:auto;
+				position: absolute;
+				left: 50%;
+				transform:translateX(-50%);
+				width:1920px;
 				height:100%;
 			}
 			.detail{
@@ -126,16 +120,17 @@ body{
 				left:0;
 				width:100%;
 				height:100%;
-				padding:70px 0;
+				padding:85px 0;
 				text-align: center;
 				h2{
-					font-size: 30px;
+					font-size: 45px;
+					font-weight: bolder;
 					color:#ffffff;
 				}
 				p{
 					margin: 40px 0 32px;
-					font-size: 18px;
-					color:#d9d9d9;
+					font-size: 26px;
+					color:#ffffff;
 					line-height: 30px;
 				}
 				a{

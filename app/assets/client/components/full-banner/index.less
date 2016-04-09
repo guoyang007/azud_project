@@ -9,7 +9,72 @@
 	.swiper-wrapper{
 		.swiper-slide{
 			height:450px;
-			width:auto;
+			width:100%;
+			&.slide-1{
+				background: url(/img/banner/banner-1.jpg) no-repeat center ;
+			}
+			&.slide-2{
+				background: url(/img/banner/banner-2.jpg) no-repeat center ;
+			}
+			&.slide-3{
+				background: url(/img/banner/banner-3.jpg) no-repeat center ;
+			}
+			&.slide-4{
+				background: url(/img/banner/banner-4.jpg) no-repeat center ;
+				.knowmore{
+					margin-top: 215px;
+					margin-left: 50%;
+					transform:translateX(-550px);
+					width: 300px;
+					text-align: center;
+					p{
+						font-size: 25px;
+						line-height: 60px;
+						color: #454746;
+					}
+					a{
+						margin-top: 40px;
+						display: inline-block;
+						height: 50px;
+						width: 140px;
+						border:2px solid #5c88b4;
+						border-radius: 10px;
+						line-height: 46px;
+						text-align: center;
+						font-size: 20px;
+						color: #5c88b4;
+					}
+
+				}
+			}
+			.intro{
+				width: 600px;
+				margin:100px auto 0;
+				color: #ffffff;
+				text-align: center;
+				h2{
+					font-size: 67px;
+					line-height: 80px;
+					color:#fff;
+					font-weight: bolder;
+					text-shadow: 3px 5px 5px #000;
+				}
+				p{
+					font-size: 30px;
+					line-height: 60px;
+					margin:18px 0;
+					text-shadow: 2px 3px 4px #000;
+				}
+				a{
+					padding:12px 20px;
+					background-color: rgba(0,0,0,0.6);
+					border-radius: 6px;
+					font-size: 20px;
+					color: #fff;
+				}
+
+			}
+
 		}
 	}
 	.swiper-pagination{

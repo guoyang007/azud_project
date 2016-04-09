@@ -38,6 +38,7 @@
 	    autoplay:3000,
 	    simulateTouch:false,
 	    slideToClickedSlide:true,
+        centeredSlides : true,
 	    // 如果需要分页器
 	    pagination: '.swiper-pagination',
 	  })        
