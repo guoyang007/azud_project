@@ -2,7 +2,7 @@
 	<div class="title">
 		<h2>商务合作</h2>
 	</div>
-	<%= form_for(@feedback) do |f| %>
+	<%= form_for(@feedback, :remote => true) do |f| %>
  		<div class="ways clearfix">
     			<%= f.text_field(:name, :placeholder => '姓名', :class => "way") %>
     			<%= f.text_field(:email, :placeholder => '邮箱', :class => "way") %>

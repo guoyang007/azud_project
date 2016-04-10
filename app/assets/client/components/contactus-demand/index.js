@@ -47,7 +47,7 @@
                     e.preventDefault();
                 }else{
                      $.fn.utils.showNotification("发送成功");
-                     // e.preventDefault();
+                        //e.preventDefault();
                 }
                 
                 // $.ajax({
