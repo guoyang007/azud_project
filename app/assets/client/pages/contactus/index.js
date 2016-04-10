@@ -1,7 +1,6 @@
 // =require components/common/index
 // =require components/page-header/index
 // =require components/contactus-demand/index
-// =reuqire components/common/initRipple
 // =require_self
  //
 

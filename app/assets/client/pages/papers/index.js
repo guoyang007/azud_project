@@ -5,7 +5,8 @@
  //
 
 $(function() {
-    var el = $('body');
+    var el = $('body'),
+        num=1;//默认已加载第一页
 
 
     // 初始化组件
@@ -17,4 +18,22 @@ $(function() {
     		$(this).html($(this).text()+"...");
     	}
     });
+    el.find('.more').on('click',function(e){
+        e.preventDefault();
+        $.ajax({
+            url: '/papers?page='+（++num）,
+            type: 'GET',
+            dataType: 'json',
+        })
+        .done(function() {
+            if(!ret){
+                $('.more').addClass('nomore');
+            }
+        })
+        .fail(function() {
+            
+        })
+
+        
+    })
 });
