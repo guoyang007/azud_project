@@ -17,4 +17,20 @@ $(function() {
     		$(this).html($(this).text()+"...");
     	}
     });
+    el.on('click','.more-btn',function(e){
+        e.preventDefault();
+        $.$.ajax({
+            url: '',
+            type: 'POST',
+            dataType: 'json',
+            data: {param1: 'value1'},
+        })
+        .done(function() {
+            console.log("success");
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        
+    })
 });
