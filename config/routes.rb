@@ -1,7 +1,7 @@
 Azud::Application.routes.draw do
   root :to => 'homes#index'
 
-  get 'contactus(.html)' => 'contactus#index'
+  get 'contactus(.html)' => 'feedbacks#new'
   get 'watertech(.html)' => 'watertech#watertech'
   get 'introduce(.html)' => 'introduce#index'
 
@@ -15,5 +15,5 @@ Azud::Application.routes.draw do
   end
 
   resources :papers#关于
-
+  resources :feedbacks
 end
