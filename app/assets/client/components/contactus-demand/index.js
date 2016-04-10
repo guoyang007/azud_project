@@ -34,7 +34,7 @@
             var me = this,
                 el = me.el;
 
-            el.on("click",".content .submit",function(e){
+            el.on("click",".submit",function(e){
                 e.preventDefault();
                 var name=$('input[type="text"]').val().length,
                     email=$('input[type="email"]').val().length,
@@ -49,7 +49,7 @@
                 }
                 elCurrent.addClass('disable');
                 $.ajax({
-                    url:elForm.attr('action'),
+                    url:'/',
                     type:'post',
                     dataType:'json',
                     data:{

@@ -2,28 +2,13 @@
 	<div class="title">
 		<h2>商务合作</h2>
 	</div>
-	<%= form_for(@feedback,:class=>'content') do |f| %>
+	<%= form_for(@feedback) do |f| %>
  		<div class="ways clearfix">
-    			<%= f.label :name %>
     			<%= f.text_field(:name, :placeholder => '姓名', :class => "way") %>
-    			<%= f.label :email %>
     			<%= f.text_field(:email, :placeholder => '邮箱', :class => "way") %>
-    			<%= f.label :phone %>
     			<%= f.text_field(:phone, :placeholder => '电话', :class => "way") %>
   		</div>
-  		<%= f.label :content %>
     		<%= f.text_area(:content, :placeholder => '在这里写下您的需求，我们会尽快与您联系！', :class => "mess") %>
-  		<div class="actions">
-    			<%= f.submit(:value => '提交')%>
-    		</div>
+    			<%= f.submit(:value => '提交',:class => "submit")%>
 	<% end %>
-<!-- 	<form action="post" class="content">
-		<div class="ways clearfix">
-			<input auto-complete="off" class="way" placeholder="姓名" type="name">
-			<input auto-complete="off" class="way" placeholder="邮箱" type="email">
-			<input auto-complete="off" class="way" placeholder="电话" type="phone">
-		</div>
-		<textarea class="mess" type="content" placeholder="在这里写下您的需求，我们会尽快与您联系！"></textarea>
-		<input class="submit ripple" type="submit" value="提交">
-	</form> -->
 </div>
