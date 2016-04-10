@@ -8,11 +8,11 @@
     function initRipple() {
         var el = $('body'),
             x, y, size;
-        //     isSupportCSSAnimations = $('html').hasClass('cssanimations');
+            isSupportCSSAnimations = $('html').hasClass('cssanimations');
 
-        // if (!isSupportCSSAnimations) {
-        //     return;
-        // }
+        if (!isSupportCSSAnimations) {
+            return;
+        }
 
         el.on('animationend webkitanimationend mozanimationend msanimationend oanimationend', '.ripple .ink', function(e) {
             e.preventDefault();

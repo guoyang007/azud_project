@@ -21,7 +21,7 @@
                 el = me.el;
 
             me.bindEvents();
-
+            $.fn.initLink();
             window.COMS = window.COMS || [];
             el.attr('data-initialized', 'true');
             el.attr('data-guid', window.COMS.length);
@@ -34,7 +34,7 @@
                 el = me.el,
                 elIndex=null,
                 collapse=false,
-                press=new RegExp("press"),
+                papers=new RegExp("papers"),
                 fiteration=new RegExp("fiteration"),
                 elTop=$('.com-page-header').outerHeight(),
                 elHeight=el.find('.page-hd').outerHeight(),
@@ -56,8 +56,8 @@
                     /* Act on the event */
                     event.preventDefault();
                 })
-                if(press.test(curPath)){
-                    $("[href='/press']").addClass('cur');
+                if(papers.test(curPath)){
+                    $("[href='/papers']").addClass('cur');
                 }
                 // if(fiteration.test(curPath)){
                 //     el.css("height","197px");

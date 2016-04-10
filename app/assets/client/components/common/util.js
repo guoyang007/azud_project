@@ -138,7 +138,7 @@
 
                 originDate = new Date(elSmartDate.attr('data-originDate').replace(/-/g, "/"));
 
-                elSmartDate.text(originDate.getDate() + '/'+ (originDate.getMonth() + 1) + '/' +originDate.getFullYear() );     
+                elSmartDate.text(originDate.getFullYear()+ '-'+ (originDate.getMonth() + 1) +'-'+originDate.getDate() );     
             });
         },
 

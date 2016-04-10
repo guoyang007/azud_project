@@ -5,11 +5,9 @@
  //
 
 $(function() {
-    var el = $('body'),
-    	elClientHeight=document.documentElement.clientHeight;
+    var el = $('body');
 
 
     // 初始化组件
     el.find('.com-page-header').PageHeader();
-    $('.page-container').css('min-height',elClientHeight);
 });
