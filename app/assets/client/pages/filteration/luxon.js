@@ -9,12 +9,12 @@
 $(function(){
 	var el=$('body'),
 		curPath=window.location.pathname,
-		fiteration=new RegExp("fiteration");
+		filteration=new RegExp("filteration");
 
 	el.find('.com-page-header').PageHeader();
 	el.find('.com-luxon-apply').LuxonApply();
 	el.find('.com-luxon-module').LuxonModule();
-	if(fiteration.test(curPath)){
+	if(filteration.test(curPath)){
 	    $('.page-container').css("padding-top","197px");
 	}
 })

@@ -5,15 +5,15 @@ Azud::Application.routes.draw do
   get 'watertech(.html)' => 'watertech#watertech'
   get 'introduce(.html)' => 'introduce#index'
 
-  resources :fiteration do#关于
+  resources :filteration do#关于
     collection do
-      get "/helix" => "fiteration#helix"
-      get "/luxon" => "fiteration#luxon"
-      get "/semiauto" => "fiteration#semiauto"
-      get "/helix/detail" => "fiteration#detail"
+      get "/helix" => "filteration#helix"
+      get "/luxon" => "filteration#luxon"
+      get "/semiauto" => "filteration#semiauto"
+      get "/helix/detail" => "filteration#detail"
     end
   end
 
   resources :papers#关于
-  resources :feedbacks
+  resources :feedbacks 
 end

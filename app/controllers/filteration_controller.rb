@@ -1,4 +1,4 @@
-class FiterationController < BaseController
+class filterationController < BaseController
 	def helix
 	end
 

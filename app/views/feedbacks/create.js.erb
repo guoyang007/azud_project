@@ -1,4 +1,13 @@
-$('submit').on('click',function(e){
-	console.log(21321321);
-	return false;
-})
+	$.fn.utils.showNotification("提交成功");
+	$('.submit').addClass('disable')
+	setTimeout(function(){
+                $('.submit').removeClass('disable');
+            },2000);
+
+        // error:function(xhr){
+        //     var ret=xhr.responseJSON;
+        //     $.fn.utils.showNotification(ret);
+        //     elCurrent.hasClass('disable')&&elCurrent.removeClass('disable');
+        // }
+
+ 

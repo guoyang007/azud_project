@@ -1,14 +1,17 @@
 //
 // =require components/common/index
 // =require components/page-header/index
-// 
+//
+//=require_self
+
 $(function(){
 	var el=$('body'),
 		curPath=window.location.pathname,
-		fiteration=new RegExp("fiteration");
+		filteration=new RegExp("filteration");
 
 	el.find('.com-page-header').PageHeader();
-	if(fiteration.test(curPath)){
+	if(filteration.test(curPath)){
 	    $('.page-container').css("padding-top","197px");
 	}
-}) 
+
+})

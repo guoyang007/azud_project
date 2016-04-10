@@ -2,6 +2,7 @@
 class FeedbacksController < BaseController
 	def new
 		@feedback = Feedback.new
+		# render layout: nil
 	end
 
 	def create
@@ -9,6 +10,8 @@ class FeedbacksController < BaseController
 		respond_to do |format|
 			if @feedback.save
 				format.js
+			else 
+				
 			end
 		end
 	end

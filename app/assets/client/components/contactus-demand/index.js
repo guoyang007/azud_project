@@ -1,5 +1,4 @@
 //=require_self
-//= require components/common/initRipple 
 //
 //
 
@@ -19,9 +18,7 @@
             var me = this,
                 el = me.el;
 
-            me.bindEvents();
-            $.fn.initRipple();
-           
+            me.bindEvents();           
 
             window.COMS = window.COMS || [];
             el.attr('data-initialized', 'true');
@@ -45,34 +42,12 @@
                 if(!(name&&email&&tel&&demand)){
                     $.fn.utils.showNotification('请完善您的信息');
                     e.preventDefault();
-                }else{
-                     $.fn.utils.showNotification("发送成功");
-                        //e.preventDefault();
+                 }else{
+                //      $.fn.utils.showNotification("发送成功");
+                //         //e.preventDefault();
                 }
                 
-                // $.ajax({
-                //     url:$('#new_feedback').attr('action'),
-                //     type:'post',
-                //     dataType:'json',
-                //     data:{
-                //         'name':$('#feedback_name').val(),
-                //         'email':$('#feedback_email').val(),
-                //         'phone':$('#feedback_phone').val(),
-                //         'content':$('#feedback_content').val()
-                //     },
-                //     success:function(ret){
-                //         $.fn.utils.showNotification(ret.msg);
-                //         setTimeout(function(){
-                //             elCurrent.removeClass('disable');
-                //         },2000);
-                //     },
-                //     error:function(xhr){
-                //         var ret=xhr.responseJSON;
-                //         $.fn.utils.showNotification(ret.error);
-                //         elCurrent.hasClass('disable')&&elCurrent.removeClass('disable');
-                //     }
-
-                // })
+                
             })    
         }
     }

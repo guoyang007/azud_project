@@ -35,7 +35,7 @@
                 elIndex=null,
                 collapse=false,
                 papers=new RegExp("papers"),
-                fiteration=new RegExp("fiteration"),
+                filteration=new RegExp("filteration"),
                 elTop=$('.com-page-header').outerHeight(),
                 elHeight=el.find('.page-hd').outerHeight(),
                 curPath=window.location.pathname;
@@ -52,20 +52,20 @@
                         $(this).addClass('cur');
                     }
                 })
-                el.find("[href='/fiteration']").on("click",function(event) {
+                el.find("[href='/filteration']").on("click",function(event) {
                     /* Act on the event */
                     event.preventDefault();
                 })
                 if(papers.test(curPath)){
                     $("[href='/papers']").addClass('cur');
                 }
-                // if(fiteration.test(curPath)){
+                // if(filteration.test(curPath)){
                 //     el.css("height","197px");
                 // }
-                if(fiteration.test(curPath)){
+                if(filteration.test(curPath)){
                     el.css("margin-bottom","-197px");
                 }
-                if(curPath=='/fiteration/helix/detail'){
+                if(curPath=='/filteration/helix/detail'){
                     $('.page-bd .lists').slideDown().find('li:first').addClass('active');
                 }
                 if(curPath=='/'){
