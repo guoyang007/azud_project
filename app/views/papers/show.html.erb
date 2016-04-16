@@ -6,9 +6,7 @@
 			<span class="smart-time"><%= @paper.updated_at.strftime("%Y-%m-%d") %></span>
 		</div>
 		<div class="rich-text">
-			<%#= @paper.content.html_safe %>
-			<h6><%= @paper.subtitle %> </h6>
-			<p><%=include_kindeditor %></p>
+			<%= @paper.content.html_safe %>
 		</div>
 		<div class="sub-nav clearfix <% if @paper.id == Paper.last.id %>first<%elsif @paper.id ==Paper.first.id %>last<%end%>" >
 			<a class="prev_page" href="/papers/<%= @paper.id + 1 %>">上一篇</a>

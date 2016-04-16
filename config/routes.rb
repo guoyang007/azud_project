@@ -14,6 +14,7 @@ Azud::Application.routes.draw do
     end
   end
 
+  get 'irrigation(.html)' => 'irrigation#index'
   resources :papers#关于
   resources :feedbacks 
 end
