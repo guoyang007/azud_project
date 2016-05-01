@@ -52,10 +52,10 @@
                         $(this).addClass('cur');
                     }
                 })
-                el.find("[href='/filteration']").on("click",function(event) {
-                    /* Act on the event */
-                    event.preventDefault();
-                })
+                // el.find("[href='/filteration']").on("click",function(event) {
+                //     /* Act on the event */
+                //     event.preventDefault();
+                // })
                 if(papers.test(curPath)){
                     $("[href='/papers']").addClass('cur');
                 }
@@ -91,9 +91,9 @@
                     $(".lists .list").eq(0).slideDown().siblings().slideUp();
                         
                 });
-                el.find('.navs .nav:eq(2)').on('click',function(e){
-                    $(".page-bd .lists").slideDown();
-                })
+                // el.find('.navs .nav:eq(2)').on('click',function(e){
+                //     $(".page-bd .lists").slideDown();
+                // })
 
         }
     }
