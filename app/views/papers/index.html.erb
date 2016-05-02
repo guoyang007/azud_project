@@ -1,5 +1,5 @@
 <div class="page-container">
-	<%= stylesheet_link_tag "pages/press/index" %>
+	<%= stylesheet_link_tag "pages/papers/index" %>
 	<div class="banner"><img src="/img/press/banner.jpg" alt=""></div>
 	<ul class="lists">
 	<% @papers.each do |paper|%>
@@ -20,6 +20,9 @@
 			<p>没有更多了</p>
 		<% end %>
 	</div>
+	<div class="nomore hidden">
+		<span>没有更多了</span>
+	</div>
 	
 <!-- 	<div class="digg_pagination">
 	        <div class="page_info">
@@ -27,5 +30,5 @@
 	        </div>
 	        <%= will_paginate @posts, :container => false %>
 	</div>
- -->	<%= javascript_include_tag "pages/press/index" %>
+ -->	<%= javascript_include_tag "pages/papers/index" %>
 </div>

@@ -5,35 +5,32 @@
  //
 
 $(function() {
-    var el = $('body'),
-        num=1;//默认已加载第一页
+    var el = $('body');
 
 
     // 初始化组件
     el.find('.com-page-header').PageHeader();
     el.find('.text-overflow').each(function(){
-    	var maxwidth=125;
-    	if($(this).text().length>maxwidth){
-    		$(this).text($(this).text().substring(0,maxwidth));
-    		$(this).html($(this).text()+"...");
-    	}
+        var maxwidth=125;
+        if($(this).text().length>maxwidth){
+            $(this).text($(this).text().substring(0,maxwidth));
+            $(this).html($(this).text()+"...");
+        }
     });
-    el.find('.more').on('click',function(e){
+    el.on('click','.more-btn',function(e){
         e.preventDefault();
-        $.ajax({
-            url: '/papers?page='+（++num）,
-            type: 'GET',
+        $.$.ajax({
+            url: '',
+            type: 'POST',
             dataType: 'json',
+            data: {param1: 'value1'},
         })
         .done(function() {
-            if(!ret){
-                $('.more').addClass('nomore');
-            }
+            console.log("success");
         })
         .fail(function() {
-            
+            console.log("error");
         })
-
         
     })
 });
