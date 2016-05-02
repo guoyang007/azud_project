@@ -5,6 +5,7 @@ gem 'jquery-rails' , '3.1.2'
 gem 'mysql2' , '0.3.17'
 gem 'will_paginate' , '3.0.7'
 gem 'will_paginate-bootstrap' , '1.0.1'
+gem 'nokogiri' , '1.6.6.2'
 #less环境
 gem 'less-rails' , '2.6.0'
 gem 'therubyracer' , '0.12.1'

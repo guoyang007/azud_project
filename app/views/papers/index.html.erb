@@ -13,7 +13,12 @@
 	<%end%>
 	</ul>
 	<div class="more">
-		<a href="#" class="more-btn">查看更多</a>
+		<% if @has_more %>
+			<!-- <a href= class="more-btn">查看更多</a> -->
+			<%= link_to "查看更多", papers_path(page: @tmp_page), :class => "more-btn"%>
+		<% else %>
+			<p>没有更多了</p>
+		<% end %>
 	</div>
 	
 <!-- 	<div class="digg_pagination">
