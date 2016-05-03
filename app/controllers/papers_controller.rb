@@ -14,7 +14,7 @@ class PapersController < BaseController
 
   def show
     @paper = Paper.find(params[:id])
-    change_img_root(@paper.content)
+    @content = change_img_root(@paper.content)
   end
 
   private
@@ -22,7 +22,7 @@ class PapersController < BaseController
     xml = ["<paper_content>" , html , "</paper_content>"].join('')
     image = Nokogiri::XML(xml)
     image.css('img').each do |img|
-      img.set_attribute('src' , File.join("/home/hao/workspaces/azud_admin/public" , img.attribute('src').value))
+      img.set_attribute('src' , File.join("http://localhost:3003" , img.attribute('src').value))
     end
     html = image.to_html
     return html
