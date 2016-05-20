@@ -4,7 +4,7 @@ Azud::Application.routes.draw do
   get 'contactus(.html)' => 'feedbacks#new'
   get 'watertech(.html)' => 'watertech#watertech'
   get 'introduce(.html)' => 'introduce#index'
-
+  get "filteration(.html)" => "filteration#index"
   resources :filteration do#关于
     collection do
       get "/helix" => "filteration#helix"

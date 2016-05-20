@@ -1,4 +1,7 @@
 class FilterationController < BaseController
+	def index
+	end
+
 	def helix
 	end
 
