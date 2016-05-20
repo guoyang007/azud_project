@@ -5,7 +5,8 @@
  //
 
 $(function() {
-    var el = $('body');
+    var el = $('body'),
+    page;
 
 
     // 初始化组件
@@ -17,20 +18,20 @@ $(function() {
             $(this).html($(this).text()+"...");
         }
     });
-    el.on('click','.more-btn',function(e){
-        e.preventDefault();
-        $.$.ajax({
-            url: '',
-            type: 'POST',
-            dataType: 'json',
-            data: {param1: 'value1'},
-        })
-        .done(function() {
-            console.log("success");
-        })
-        .fail(function() {
-            console.log("error");
-        })
+    // el.on('click','.more-btn',function(e){
+    //     e.preventDefault();
+    //     $.ajax({
+    //         url: '/papers'+page,
+    //         type: 'POST',
+    //         dataType: 'json',
+    //         data: {param1: 'value1'},
+    //     })
+    //     .done(function() {
+    //         console.log("success");
+    //     })
+    //     .fail(function() {
+    //         console.log("error");
+    //     })
         
-    })
+    // })
 });

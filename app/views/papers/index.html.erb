@@ -12,23 +12,12 @@
 		</li>
 	<%end%>
 	</ul>
-	<div class="more">
-		<% if @has_more %>
-			<!-- <a href= class="more-btn">查看更多</a> -->
-			<%= link_to "查看更多", papers_path(page: @tmp_page), :class => "more-btn"%>
-		<% else %>
-			<p>没有更多了</p>
-		<% end %>
-	</div>
-	<div class="nomore hidden">
-		<span>没有更多了</span>
-	</div>
 	
-<!-- 	<div class="digg_pagination">
+	<div class="digg_pagination">
 	        <div class="page_info">
 	          <%= page_entries_info @posts %>
 	        </div>
-	        <%= will_paginate @posts, :container => false %>
+	        <%= page_navigation_links @posts %>
 	</div>
- -->	<%= javascript_include_tag "pages/papers/index" %>
+ 	<%= javascript_include_tag "pages/papers/index" %>
 </div>
