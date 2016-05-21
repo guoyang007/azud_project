@@ -3,9 +3,6 @@ class PapersController < BaseController
   def index
     page = params[:page] || 1
     @papers = Paper.where("state = true").paginate(:page => page, :per_page => 5).order("id DESC")
-    @tmp_page = page.to_i + 1
-    tmp_paper = Paper.where("state = true").paginate(:page => @tmp_page, :per_page => 1)
-    @has_more = (tmp_paper != [])
     respond_to do |format|
       format.html
       format.json{ render json: @papers }
@@ -22,7 +19,7 @@ class PapersController < BaseController
     xml = ["<paper_content>" , html , "</paper_content>"].join('')
     image = Nokogiri::XML(xml)
     image.css('img').each do |img|
-      img.set_attribute('src' , File.join("http://localhost:3003" , img.attribute('src').value))
+      img.set_attribute('src' , File.join($AdminIp , img.attribute('src').value))
     end
     html = image.to_html
     return html
