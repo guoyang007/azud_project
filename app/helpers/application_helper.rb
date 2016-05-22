@@ -14,11 +14,11 @@ module ApplicationHelper
     end
       
     def gap
-      tag :li, link(super, '#'), :class => 'disabled'
+      tag :li, link(super, 'javascript:void(0);'), :class => 'disabled'
     end
       
     def previous_or_next_page(page, text, classname)
-      tag :li, link(text, page || '#'), :class => [classname[0..3], classname, ('disabled' unless page)].join(' ')
+      tag :li, link(text, page || 'javascript:void(0);'), :class => [classname[0..3], classname, ('disabled' unless page)].join(' ')
     end
   end
       
