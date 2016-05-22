@@ -45,12 +45,33 @@ body{
 				}
 			}
 		}
-		.more{
+		// .more{
+		// 	padding:15px 0;
+		// 	a{
+		// 		font-size: 16px;
+		// 		color: #044588;
+		// 		text-decoration: underline;
+		// 	}
+		// }
+		.digg_pagination{
 			padding:15px 0;
-			a{
+			li{
+				padding:2px 4px;
+				float: left;
 				font-size: 16px;
-				color: #044588;
-				text-decoration: underline;
+				a{
+					color: #014383;
+				}
+				&.active{
+					a{
+						color: #009c65;
+					}
+				}
+				&.disabled{
+					a{
+						color: #999999;
+					}
+				}
 			}
 		}
 	}
