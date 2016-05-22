@@ -57,4 +57,28 @@ class FilterationController < BaseController
   	def download_luxon_lpf
   		send_file("files/20160505_AZUD_LUXON_LPF ENG.pdf" , disposition: :attachment)
   	end
+
+    def download_semi_lcm
+      send_file("files/20160505_AZUD_SIMI_SYSTEM_LCM ENG.pdf" , disposition: :attachment)
+    end
+
+    def download_semi_spiral
+      send_file("files/20160505_AZUD_SPIRAL_CLEAN ENG.pdf" , disposition: :attachment)
+    end
+
+    def download_semi_system
+      send_file("files/20160505_AZUD_SEMI_SYSTEM ENG.pdf" , disposition: :attachment)
+    end
+
+    def download_semi_100
+      send_file("files/20160505_AZUD_SEMI_MODULAR_100 ENG.pdf" , disposition: :attachment)
+    end
+
+    def download_semi_300
+      send_file("files/20160505_AZUD_SEMI_MODULAR_300 ENG.pdf" , disposition: :attachment)
+    end
+
+    def download_semi_agl
+      send_file("files/20160505_AZUD_SEMI_AGL ENG.pdf" , disposition: :attachment)
+    end
 end

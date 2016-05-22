@@ -34,6 +34,13 @@ Azud::Application.routes.draw do
       get "/download_luxon_lem" => "filteration#download_luxon_lem"
       get "/download_luxon_lkm" => "filteration#download_luxon_lkm"
       get "/download_luxon_lpf" => "filteration#download_luxon_lpf"
+
+      get "/download_semi_lcm" => "filteration#download_semi_lcm"
+      get "/download_semi_spiral" => "filteration#download_semi_spiral"
+      get "/download_semi_system" => "filteration#download_semi_system"
+      get "/download_semi_100" => "filteration#download_semi_100"
+      get "/download_semi_300" => "filteration#download_semi_300"
+      get "/download_semi_agl" => "filteration#download_semi_agl"
     end
   end
 
