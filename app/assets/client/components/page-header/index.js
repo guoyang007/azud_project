@@ -83,17 +83,17 @@
                 	}
                 })
                 //展开二级菜单
-                el.find(".navs .nav").on('click',function(e){ 
-                    var elcurrent=e.currentTarget;
-                    $(elcurrent).addClass("cur").siblings().removeClass("cur");
-                    // elIndex=$('.navs .nav').index(elcurrent);
-                    // $(".page-bd .lists").slideDown();
-                    $(".lists .list").eq(0).slideDown().siblings().slideUp();
+                // el.find(".navs .nav").on('click',function(e){ 
+                //     var elcurrent=e.currentTarget;
+                //     $(elcurrent).addClass("cur").siblings().removeClass("cur");
+                //     // elIndex=$('.navs .nav').index(elcurrent);
+                //     // $(".page-bd .lists").slideDown();
+                //     $(".lists .list").eq(0).slideDown().siblings().slideUp();
                         
-                });
-                el.find('.navs .nav:eq(2)').on('click',function(e){
-                    $(".page-bd .lists").slideDown();
-                })
+                // });
+                // el.find('.navs .nav:eq(2)').on('click',function(e){
+                //     $(".page-bd .lists").slideDown();
+                // })
 
         }
     }
