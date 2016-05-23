@@ -14,7 +14,7 @@ $(function(){
 	el.find('.com-helix-module').HelixModule();
 	el.find('.com-helix-apply').HelixApply();
 
-	// if(filteration.test(curPath)){
-	//     $('.page-container').css("padding-top","197px");
-	// }
+	if(filteration.test(curPath)){
+	    $('.page-container').css("padding-top","197px");
+	}
 })

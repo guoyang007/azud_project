@@ -40,12 +40,12 @@
                 elHeight=el.find('.page-hd').outerHeight(),
                 curPath=window.location.pathname;
 
-                // $('.list li a').each(function(e){
-                //     if($(this).attr('href')==curPath){
-                //         $('.lists').show();
-                //         $(this).parent().addClass('active');
-                //     }
-                // })
+                $('.list li a').each(function(e){
+                    if($(this).attr('href')==curPath){
+                        $('.lists').show();
+                        $(this).parent().addClass('active');
+                    }
+                })
                 //当前目录下高亮
                 $('.navs .nav').each(function(e){
                     if($(this).attr('href')==curPath){
@@ -59,15 +59,15 @@
                 if(papers.test(curPath)){
                     $("[href='/papers']").addClass('cur');
                 }
-                // if(filteration.test(curPath)){
-                //     el.css("height","197px");
-                // }
-                // if(filteration.test(curPath)){
-                //     el.css("margin-bottom","-197px");
-                // }
-                // if(curPath=='/filteration/helix/detail'){
-                //     $('.page-bd .lists').slideDown().find('li:first').addClass('active');
-                // }
+                if(filteration.test(curPath)){
+                    el.css("height","197px");
+                }
+                if(filteration.test(curPath)){
+                    el.css("margin-bottom","-197px");
+                }
+                if(curPath=='/filteration/helix/detail'){
+                    $('.page-bd .lists').slideDown().find('li:first').addClass('active');
+                }
                 if(curPath=='/'){
                     $('.nav:first').addClass('cur');
                 }
@@ -83,17 +83,17 @@
                 	}
                 })
                 //展开二级菜单
-                // el.find(".navs .nav").on('click',function(e){ 
-                //     var elcurrent=e.currentTarget;
-                //     $(elcurrent).addClass("cur").siblings().removeClass("cur");
-                //     // elIndex=$('.navs .nav').index(elcurrent);
-                //     // $(".page-bd .lists").slideDown();
-                //     $(".lists .list").eq(0).slideDown().siblings().slideUp();
+                el.find(".navs .nav").on('click',function(e){ 
+                    var elcurrent=e.currentTarget;
+                    $(elcurrent).addClass("cur").siblings().removeClass("cur");
+                    // elIndex=$('.navs .nav').index(elcurrent);
+                    // $(".page-bd .lists").slideDown();
+                    $(".lists .list").eq(0).slideDown().siblings().slideUp();
                         
-                // });
-                // el.find('.navs .nav:eq(2)').on('click',function(e){
-                //     $(".page-bd .lists").slideDown();
-                // })
+                });
+                el.find('.navs .nav:eq(2)').on('click',function(e){
+                    $(".page-bd .lists").slideDown();
+                })
 
         }
     }

@@ -8,7 +8,7 @@ $(function(){
 		filteration=new RegExp("filteration");
 
 	el.find('.com-page-header').PageHeader();
-	// if(filteration.test(curPath)){
-	//     $('.page-container').css("padding-top","197px");
-	// }
+	if(filteration.test(curPath)){
+	    $('.page-container').css("padding-top","197px");
+	}
 }) 
