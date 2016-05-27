@@ -27,6 +27,8 @@ Azud::Application.routes.draw do
       get "/download_helix_201" => "filteration#download_helix_201"
       get "/download_helix_dcl" => "filteration#download_helix_dcl"
       get "/download_helix_400" => "filteration#download_helix_400"
+      get "/download_helix_dlp" => "filteration#download_helix_dlp"
+
       get "/download_luxon_lca" => "filteration#download_luxon_lca"
       get "/download_luxon_mfh" => "filteration#download_luxon_mfh"
       get "/download_luxon_ldb" => "filteration#download_luxon_ldb"

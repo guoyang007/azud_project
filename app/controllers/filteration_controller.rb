@@ -30,6 +30,10 @@ class FilterationController < BaseController
     		send_file("files/20160505_AZUD_HELIX_AUTO_4DCL_4DCH ENG.pdf" , disposition: :inline)
   	end
 
+    def download_helix_dlp
+        send_file("files/2013624163143AZUD_HELIX_AUTO_DLPENG.pdf" , disposition: :inline)
+    end
+
   	def download_luxon_lca
   		send_file("files/20160505_AZUD_LUXON_LCA ENG.pdf" , disposition: :inline)
   	end
@@ -81,4 +85,6 @@ class FilterationController < BaseController
     def download_semi_agl
       send_file("files/20160505_AZUD_SEMI_AGL ENG.pdf" , disposition: :inline)
     end
+    
+
 end
