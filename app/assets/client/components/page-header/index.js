@@ -21,7 +21,6 @@
                 el = me.el;
 
             me.bindEvents();
-            $.fn.initLink();
             window.COMS = window.COMS || [];
             el.attr('data-initialized', 'true');
             el.attr('data-guid', window.COMS.length);
@@ -46,10 +45,13 @@
                         $(this).parent().addClass('active');
                     }
                 })
+
                 //当前目录下高亮
                 $('.navs .nav').each(function(e){
+
                     if($(this).attr('href')==curPath){
                         $(this).addClass('cur');
+
                     }
                 })
                 // el.find("[href='/filteration']").on("click",function(event) {
@@ -60,10 +62,11 @@
                     $("[href='/papers']").addClass('cur');
                 }
                 if(filteration.test(curPath)){
-                    el.css("height","197px");
-                }
-                if(filteration.test(curPath)){
-                    el.css("margin-bottom","-197px");
+                    if(curPath=='/filteration') return;
+                    el.css({
+                        "height":"197px",
+                        "margin-bottom":"-197px"
+                    });
                 }
                 if(curPath=='/filteration/helix/detail'){
                     $('.page-bd .lists').slideDown().find('li:first').addClass('active');
