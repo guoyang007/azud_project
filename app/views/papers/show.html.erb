@@ -8,12 +8,17 @@
 		<div class="rich-text">
 			<%= @content.html_safe %>
 		</div>
-		<div class="sub-nav clearfix <% if @paper.id == Paper.last.id %>first<%elsif @paper.id ==Paper.first.id %>last<%end%>" >
-			<a class="prev_page" href="/papers/<%= @paper.id + 1 %>">上一篇</a>
-			<a class="next_page" href="/papers/<%= @paper.id - 1 %>">下一篇</a>
-			<a href="/papers">返回列表</a>
-		</div>
-
+		<% if Paper.count == 1 %>
+			<div class="sub-nav clearifx">
+				<a href="/papers">返回列表</a>
+			</div>
+		<% else %>
+			<div class="sub-nav clearfix <% if @paper.id == Paper.last.id %>first<%elsif @paper.id ==Paper.first.id %>last<%end%>" >
+				<a class="prev_page" href="/papers/<%= @paper.id + 1 %>">上一篇</a>
+				<a class="next_page" href="/papers/<%= @paper.id - 1 %>">下一篇</a>
+				<a href="/papers">返回列表</a>
+			</div>
+		<% end %>
 	</div>
 		<%= javascript_include_tag "pages/papers/detail" %>
 </div>
