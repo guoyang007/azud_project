@@ -5,10 +5,10 @@
 $(function(){
 	var el=$('body'),
 		curPath=window.location.pathname,
-		filteration=new RegExp("filteration");
+		filtration=new RegExp("filtration");
 
 	el.find('.com-page-header').PageHeader();
-	if(filteration.test(curPath)){
-	    $('.page-container').css("padding-top","197px");
+	if(filtration.test(curPath)){
+	    $('.page-container').css({"padding-top":"197px"});
 	}
 }) 
