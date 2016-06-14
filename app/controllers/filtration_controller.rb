@@ -1,4 +1,4 @@
-class FilterationController < BaseController
+class FiltrationController < BaseController
 	def index
 	end
 

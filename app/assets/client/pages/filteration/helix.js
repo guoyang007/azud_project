@@ -8,13 +8,13 @@
 $(function(){
 	var el=$('body'),
 		curPath=window.location.pathname,
-		filteration=new RegExp("filteration");
+		filtration=new RegExp("filtration");
 
 	el.find('.com-page-header').PageHeader();
 	el.find('.com-helix-module').HelixModule();
 	el.find('.com-helix-apply').HelixApply();
 
-	if(filteration.test(curPath)){
-	    $('.page-container').css("padding-top","197px");
+	if(filtration.test(curPath)){
+	    $('.page-container').css({"padding-top":"197px"});
 	}
 })

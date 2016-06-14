@@ -3,7 +3,7 @@ Azud::Application.routes.draw do
   get 'contactus(.html)' => 'feedbacks#new'
   get 'watertech(.html)' => 'watertech#watertech'
   get 'introduce(.html)' => 'introduce#index'
-  get "filteration(.html)" => "filteration#index"
+  get "filtration(.html)" => "filtration#index"
   get 'irrigation(.html)' => 'irrigation#index'
   
   resources :watertech do
@@ -17,32 +17,32 @@ Azud::Application.routes.draw do
     end
   end
 
-  resources :filteration do
+  resources :filtration do
     collection do
-      get "/helix" => "filteration#helix"
-      get "/luxon" => "filteration#luxon"
-      get "/semiauto" => "filteration#semiauto"
-      get "/helix/detail" => "filteration#detail"
-      get "/download_helix_200" => "filteration#download_helix_200"
-      get "/download_helix_201" => "filteration#download_helix_201"
-      get "/download_helix_dcl" => "filteration#download_helix_dcl"
-      get "/download_helix_400" => "filteration#download_helix_400"
-      get "/download_helix_dlp" => "filteration#download_helix_dlp"
+      get "/helix" => "filtration#helix"
+      get "/luxon" => "filtration#luxon"
+      get "/semiauto" => "filtration#semiauto"
+      get "/helix/detail" => "filtration#detail"
+      get "/download_helix_200" => "filtration#download_helix_200"
+      get "/download_helix_201" => "filtration#download_helix_201"
+      get "/download_helix_dcl" => "filtration#download_helix_dcl"
+      get "/download_helix_400" => "filtration#download_helix_400"
+      get "/download_helix_dlp" => "filtration#download_helix_dlp"
 
-      get "/download_luxon_lca" => "filteration#download_luxon_lca"
-      get "/download_luxon_mfh" => "filteration#download_luxon_mfh"
-      get "/download_luxon_ldb" => "filteration#download_luxon_ldb"
-      get "/download_luxon_lxe" => "filteration#download_luxon_lxe"
-      get "/download_luxon_lem" => "filteration#download_luxon_lem"
-      get "/download_luxon_lkm" => "filteration#download_luxon_lkm"
-      get "/download_luxon_lpf" => "filteration#download_luxon_lpf"
+      get "/download_luxon_lca" => "filtration#download_luxon_lca"
+      get "/download_luxon_mfh" => "filtration#download_luxon_mfh"
+      get "/download_luxon_ldb" => "filtration#download_luxon_ldb"
+      get "/download_luxon_lxe" => "filtration#download_luxon_lxe"
+      get "/download_luxon_lem" => "filtration#download_luxon_lem"
+      get "/download_luxon_lkm" => "filtration#download_luxon_lkm"
+      get "/download_luxon_lpf" => "filtration#download_luxon_lpf"
 
-      get "/download_semi_lcm" => "filteration#download_semi_lcm"
-      get "/download_semi_spiral" => "filteration#download_semi_spiral"
-      get "/download_semi_system" => "filteration#download_semi_system"
-      get "/download_semi_100" => "filteration#download_semi_100"
-      get "/download_semi_300" => "filteration#download_semi_300"
-      get "/download_semi_agl" => "filteration#download_semi_agl"
+      get "/download_semi_lcm" => "filtration#download_semi_lcm"
+      get "/download_semi_spiral" => "filtration#download_semi_spiral"
+      get "/download_semi_system" => "filtration#download_semi_system"
+      get "/download_semi_100" => "filtration#download_semi_100"
+      get "/download_semi_300" => "filtration#download_semi_300"
+      get "/download_semi_agl" => "filtration#download_semi_agl"
     end
   end
 
