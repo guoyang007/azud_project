@@ -5,7 +5,10 @@
 	<% @papers.each do |paper|%>
 		<li class="list">
 			<a href="/papers/<%=paper.id %>" target="_self">
-				<h4><%= paper.title %></h4>
+				<h4><%= paper.title %><% if paper.front %>
+					<img src="/img/press/up.png" alt=""> 
+					<% end %>
+				</h4>
 				<p class="text-overflow"><%= paper.subtitle %></p>
 				<span><%= paper.updated_at.strftime("%Y-%m-%d") %></span>
 			</a>
