@@ -46,6 +46,26 @@ Azud::Application.routes.draw do
     end
   end
 
+  resources :irrigation do
+    collection do
+      get "/download_line" => "irrigation#download_line"
+      get "/download_sprint" => "irrigation#download_sprint"
+      get "/download_as" => "irrigation#download_as"
+      get "/download_drip" => "irrigation#download_drip"
+      get "/download_system" => "irrigation#download_system"
+      get "/download_greentec" => "irrigation#download_greentec"
+
+      get "/download_navia" => "irrigation#download_navia"
+      get "/download_mbtech" => "irrigation#download_mbtech"
+      get "/download_fit" => "irrigation#download_fit"
+      get "/download_plus" => "irrigation#download_plus"
+      get "/download_ag" => "irrigation#download_ag"
+      get "/download_raintec" => "irrigation#download_raintec"
+
+
+    end
+  end
+
   resources :papers
   resources :feedbacks
 end
