@@ -1,9 +1,9 @@
 # coding: utf-8
 class PapersController < BaseController
   def index
-    @front_papers = Paper.where(["front = ?", true]).order("updated_at DESC").limit(3)
+    #@front_papers = Paper.where(["front = ?", true]).order("updated_at DESC").limit(3)
     page = params[:page] || 1
-    @papers = Paper.paginate(:page => page, :per_page => 5).order("id DESC")
+    @papers = Paper.where(["status = ?", 2]).paginate(:page => page, :per_page => 5).order("front DESC , publish_time DESC")
     respond_to do |format|
       format.html
       format.json{ render json: @papers }
